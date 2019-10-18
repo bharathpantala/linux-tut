@@ -1,0 +1,39 @@
+
+bharath@IN2-1025928LT:~$ aws configure
+AWS Access Key ID [None]: AKIA5VJZBL2D4MQ43KXO
+AWS Secret Access Key [None]: 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
+Default region name [None]: us-east-2
+Default output format [None]: json
+
+arn:aws:s3:::ps.bharath.pack
+arn:aws:s3:::
+
+
+
+
+ 2012  cd
+ 2013  aws configure - to login
+ 2014  aws s3 ls - to list s3 buckets list
+ 2015  aws s3 ls s3://ps.bharath.pack/
+ 
+ 2016  aws s3 cp s3://ps.bharath.pack/test-war-files.zip .
+ 2017  ls
+ 2018  aws ec2 describe-instances
+ 2019  aws configure
+ 2020  aws ec2 des
+ 2021  aws help
+ 2022  aws ec2 help
+ 2023  aws ec2 attach-volume help
+ 2024  aws s3 ls
+ 2025  aws s3 ls s3://ram-rt/
+ 2026  aws s3 ls s3://ps.bharath.pack/
+ 2027  aws s3 ls s3://ps.bharath.pack/nagesh
+ 2028  aws s3 ls s3://ps.bharath.pack/nagesh/
+ 2029  aws s3 cp s3://ps.bharath.pack/nagesh/s3.json /home/bharath/new/
+ 2030  ls new
+ 2031  ls
+ 2032  aws s3 cp test-war-files.zip s3://ps.bharath.pack/nagesh/
+ 2033  aws s3 ls s3://ps.bharath.pack/nagesh/
+ 2034  history
+
+

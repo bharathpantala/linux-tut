@@ -1,0 +1,104 @@
+                     DISTROS of Linux
+DEBIAN:
+------
+
+pkg extension is (.deb)
+
+
+
+-> fontconfig-1.1.3.deb
+
+
+# dpkg -i fontconfig-1.1.3.deb
+
+# dpkg --list
+
+# dpkg --list | grep <package name>   ( to check whether the package is installed or not)
+
+
+
+drawback here is dependencies problem:
+
+
+
+(apt) advanced packaging tool
+aptitude
+
+(apt-get)
+
+
+#apt install <pkg> -y
+#apt update
+
+distros:
+1. Debian linux
+2. Ubuntu Linux 
+3. Linux mint
+
+______________________________________________________________________________________________________--
+
+Redhat:
+------
+
+.rpm
+
+
+# rpm -ivh <.rpm>
+
+# rpm -e <.rpm>
+
+
+yum - yellowdog update modified
+
+# yum install <pkg>
+# yum remove ''
+
+distros:
+1. RHEL
+2. CentOS
+3. Fedora
+4. Amazon Linux
+
+########################################################################
+
+
+
+
+
+Client 
+
+pub:
+
+# ssh-keygen                                                    Server
+  
+
+  |                                                          ~/.ssh/authorized_keys
+    --> ~/.ssh/id_rsa
+  |
+   --> ~/.ssh/id_rsa.pub                                      # ssh-keygen
+
+   # ssh-copy-id user@ip
+   pass: 
+   ssh
+
+   private:
+
+
+$ anu.pem
+ $ chmod 400 anu.pem
+ $ ssh -i anu user@ip
+
+
+
+scp <source> user@ip:/dest/dir/
+
+scp user@ip:/src/dir/ dest
+
+rsync:
+
+
+
+ ###############################################################################################################
+
+
+
