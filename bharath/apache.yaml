@@ -1,0 +1,71 @@
+---
+- hosts: web 
+  become: true
+  vars:
+    apache_debian_pkg: apache2
+    apache_redhat_pkg: httpd
+    apache_redhat_daemon: httpd
+    apache_debain_daemon: apache2
+    doc_root: /var/www/html
+    
+  tasks:
+    - name: Install Apache HTTP Server
+      apt: name={{ apache_debian_pkg }} state=installed update_cache=yes
+      tags:
+        - never
+        - install-debian-apache
+        - install-debian-all
+
+    - name: Install Apache HTTP Server
+      yum: name={{ apache_redhat_pkg }} state=installed update_cache=yes
+      tags:
+        - never
+        - install-redhat-apache
+        - install-redhat-all
+
+    - name: Start the Webserver
+      service:
+        name: "{{ apache_debian_daemon }}"
+        state: started
+        enabled: yes
+      tags:
+        - never
+        - start-debian-apache
+        - install-debian-all
+
+    - name: Start the Webserver
+      service:
+        name: "{{ apache_redhat_daemon }}"
+        state: started
+        enabled: yes
+      tags:
+        - never
+        - start-redhat-apache
+        - install-redhat-all
+
+    - name: Copy webpages
+      copy: src=./infotern dest={{ doc_root }}
+      tags:
+        - never
+        - copy-webpages
+        - install-debian-all
+        - install-redhat-all
+
+    - name: restart the Webserver
+      service:
+        name: "{{ apache_debian_daemon }}"
+        state: restarted
+      tags:
+        - never
+        - restart-debain-apache
+        - install-debian-all
+
+    - name: restart the Webserver
+      service:
+        name: "{{ apache_redhat_daemon }}"
+        state: restarted
+      tags:
+        - never
+        - restart-redhat-apache
+        - install-redhat-all
+

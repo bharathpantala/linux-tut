@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install wget 
+      yum: pkg=wget state=present update_cache=yes
+
+    - name: Install tree
+      yum: name=tree state=installed
+
+    - name: Install git-core
+      yum: name=git-core state=present
+
+
+

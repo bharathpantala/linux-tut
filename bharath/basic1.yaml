@@ -1,0 +1,12 @@
+--- 
+- hosts: all
+  become: true  
+  tasks:
+    - name: Install wget,tree,git-core
+      yum: pkg={{ item }} state=present update_cache=yes
+      with_items:
+        - wget
+        - tree
+        - git-core
+
+
