@@ -10,7 +10,7 @@ arn:aws:s3:::
 
 
 
-
+.....................................
  2012  cd
  2013  aws configure - to login
  2014  aws s3 ls - to list s3 buckets list
