@@ -1,4 +1,4 @@
-
+'''''..........................................
 bharath@IN2-1025928LT:~$ aws configure
 AWS Access Key ID [None]: AKIA5VJZBL2D4MQ43KXO
 AWS Secret Access Key [None]: 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
@@ -10,7 +10,7 @@ arn:aws:s3:::
 
 
 
-
+.....................................
  2012  cd
  2013  aws configure - to login
  2014  aws s3 ls - to list s3 buckets list
